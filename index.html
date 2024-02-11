@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <title>Valentine's Proposal</title>
+        <link type="text/css" href="style.css" rel="stylesheet">
+        <script src="javascript.js"></script>
+    </head>
+
+    <body>
+        <div class="container">
+            <div>
+                <h1 class = "header_text">Do you wanna be my Valentine's danii?? hehe</h1>
+            </div>
+            <div class="gif_container">
+                <img src="pochacco.gif" alt="Cute animated illustration">
+            </div>
+            <div class="buttons">
+                <button class="btn" id ="yesButton" onclick="nextPage()">Yess!</button> 
+                <button class="btn" id="noButton" onmouseover="moveButton()">No</button>
+                <script>
+                    function nextPage(){
+                        window.location.href = "yes.html"
+                    }
+
+                    function moveButton(){
+                        var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth);
+                        var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight);
+                        document.getElementById('noButton').style.left = `${x}px`;
+                        document.getElementById('noButton').style.top = `${y}px`;
+
+                    }
+                </script>
+            </div>
+                
+            </div>
+        </div>
+    </body>
+</html>
